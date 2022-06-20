@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8et-QG-Pmf">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TurtleWhisper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="texture-de-sol-avec-l-herbe-pelouse-végétation-132221105" translatesAutoresizingMaskIntoConstraints="NO" id="zgv-YN-GIf">
+                                <rect key="frame" x="-40" y="35" width="650" height="457"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="650" id="ag0-Wg-oQK"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="TrueKevin" translatesAutoresizingMaskIntoConstraints="NO" id="z3Y-XV-meh" customClass="Turtle" customModule="TurtleWhisper" customModuleProvider="target">
+                                <rect key="frame" x="74" y="200" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="0zp-5l-EKX"/>
+                                    <constraint firstAttribute="height" constant="75" id="OzV-73-6Lc"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="5c4ee7c6bb7e2a029589d1ea" translatesAutoresizingMaskIntoConstraints="NO" id="Ft5-MH-l94" userLabel="obstacle" customClass="Turtle" customModule="TurtleWhisper" customModuleProvider="target">
+                                <rect key="frame" x="139" y="224" width="75" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HLO-Pw-CSZ"/>
+                                    <constraint firstAttribute="width" constant="50" id="Wd1-by-Xae"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z3Y-XV-meh" secondAttribute="trailing" constant="430" id="SOn-IS-IYs"/>
+                            <constraint firstItem="zgv-YN-GIf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="35" id="osr-gl-wGk"/>
+                            <constraint firstItem="zgv-YN-GIf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-40" id="qua-WC-1KT"/>
+                            <constraint firstItem="Ft5-MH-l94" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="180" id="zLo-Aa-CCJ"/>
+                            <constraint firstItem="z3Y-XV-meh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="zkv-kB-6Dy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KdC-Qi-9xw">
+                        <nil key="title"/>
+                        <button key="titleView" hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="cMf-FC-SLY">
+                            <rect key="frame" x="398.5" y="7" width="99" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Record Button"/>
+                            <connections>
+                                <action selector="recordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j8J-Fr-iXd"/>
+                            </connections>
+                        </button>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ObstacleX" destination="Ft5-MH-l94" id="NzI-IQ-yEb"/>
+                        <outlet property="TurtleY" destination="z3Y-XV-meh" id="Roc-Jn-cbw"/>
+                        <outlet property="recordButton" destination="cMf-FC-SLY" id="CB0-1u-oMn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1518.75" y="-42.028985507246382"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eGw-bk-oEG">
+            <objects>
+                <navigationController id="8et-QG-Pmf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lQQ-PU-jdB">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="OcI-a6-JCV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PsF-wp-LVF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="696" y="-51"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="5c4ee7c6bb7e2a029589d1ea" width="552" height="818"/>
+        <image name="TrueKevin" width="512" height="512"/>
+        <image name="texture-de-sol-avec-l-herbe-pelouse-végétation-132221105" width="1600" height="457"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
